@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(20% at 70% 90%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8c1fe69c;
+    position: relative;
+  }
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+    z-index: -1;
+  }
+  .bg::before {
+    content: '';
+    background-image: linear-gradient(#f77e7e, #ff00ea);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(22% at 30% 20%);
+  }
+  .bg::after {
+    content: '';
+    background-image: linear-gradient(#2c1ef0, #e7f709);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(22% at 80% 90%);
+  }
+  .calc {
+    width: 400px;
+    height: 533px;
+    background-color: rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+  }
+  .out {
+    width: 95%;
+    height: 100px;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid rgba(255,255,255,0.05);
+    font-size: 48px;
+    text-align: right;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+  }
+  input {
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    height: 80px;
+    outline: none;
+    transition: all 0.3s;
+  }
+  .number {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .number input:hover {
+    background-color: rgba(255,255,255,0.08);
+    transition: all 0s;
+  }
+  .number input:active {
+    background-color: #f014c0;
+  }
+  .clear {
+    grid-column: span 2;
+  }
+  .plus {
+    grid-row: span 2;
+    height: auto;
+  }
+
+
+
